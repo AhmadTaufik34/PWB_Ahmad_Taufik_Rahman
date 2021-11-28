@@ -18,7 +18,7 @@
 
 
 
-			//Get Jenis Kursus
+			//mengambil data Jenis Kursus
 			var jenis_kursus = kode_pendaftaran.substring(0, 2);
 			if (jenis_kursus == "VB") {
 				var kelas = "Visual Basic";
@@ -31,7 +31,7 @@
 				var biaya_kursus = 800000;
 			}
 
-			//Get Kode Hari
+			//mengambil Kode Hari
 			var kode_hari = kode_pendaftaran.substring(3, 4);
 			if (kode_hari == "K") {
 				var hari = "Kamis";
@@ -41,8 +41,8 @@
 				var hari = "Minggu";
 			}
 
-			//Get Biaya Tambahan
-			if (kelas == "rivate") {
+			//mengambil  Biaya Tambahan
+			if (kelas == "private") {
 				if (jumlah_peserta > 5) {
 					var biaya_tambahan = 75000 * jumlah_peserta;
 				} else {
@@ -56,7 +56,7 @@
 				}
 			}
 			
-			//Get Biaya Subsidi
+			//mengambil Biaya Subsidi
 			if (hasil_test_awal == "grade A") {
 				var biaya_subsidi = biaya_kursus * (5 / 100);
 			} else if (hasil_test_awal == "grade B") {
